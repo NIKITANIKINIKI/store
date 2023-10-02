@@ -1,0 +1,62 @@
+*{
+  margin:0;
+  padding: 0;
+}
+
+body{
+  background-color: antiquewhite;
+  color: black;
+}
+
+.wrapper{
+  width:1200px;
+  margin: 50px auto;
+}
+
+header .logo{
+  font-size: 20px;
+}
+
+header .pres{
+  margin: 50px 0;
+  background: url('./img/fly.jpg') no-repeat;
+  width: 30%;
+  height: 250px;
+  /* background-position: center center; */
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-color: rgb(179, 172, 112);
+  border-radius: 20px;
+  position: relative;
+}
+
+header .pres::after{
+  content: 'Высокое качество';
+  position: absolute;
+  top:10%;
+  left: 50%;
+  font-size: 40px;
+  color: aliceblue;
+}
+
+header ul.nav{
+  float:right;
+  list-style:none;
+}
+
+header ul.nav li{
+  display: inline;
+  margin-left:5vh;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+}
+
+header ul.nav li:hover{
+  opacity: 0.5;
+}
+
+
+footer{
+  text-align: center;
+  margin-top:12px;
+}
