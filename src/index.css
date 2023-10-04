@@ -60,3 +60,73 @@ footer{
   text-align: center;
   margin-top:12px;
 }
+
+
+main{
+  display:flex;
+  width:100%;
+  flex-wrap:wrap;
+  justify-content: space-between;
+}
+
+main{
+  display: flex;
+  width:100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+main .item{
+  width: 30%;
+  margin-bottom: 50px;
+  background: rgb(221, 185, 185);
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  position: relative;
+}
+
+
+main .item:hover{
+  background: rgb(233, 174, 174);
+}
+
+main .item img{
+  width:100%;
+  border-radius: 20px 20px 0 0;
+  transition: transform 0.5s ease;
+}
+
+main .item img:hover{
+  transform: scale(1.05);
+}
+
+main h1, main b, main, p{
+  margin: 10px 20px;
+  color:antiquewhite;
+}
+
+main b{
+  display: flex;
+  color:green;
+  justify-content: center;
+}
+
+main .add-to-card{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: red;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color:white;
+  border-radius: 50%;
+  cursor:pointer;
+  font-family: 700;
+  transition: transform 0.5s ease;
+}
+
+main .add-to-card:hover{
+  transform: scale(1.5) translateY(-6px);
+}
