@@ -8,6 +8,7 @@ class App extends React.Component {
   constructor(props){
     super(props)
     this.state={
+      myShop:[],
       items:[
         {
           id:1,
@@ -44,15 +45,19 @@ class App extends React.Component {
         
       ]
     }
+    this.addMyShop=this.addMyShop.bind(this)
   }
   render() {
     return (
       <div className='wrapper'>
-        <Header/>
-        <Items items={this.state.items}/>
+        <Header myShop={this.state.myShop}/>
+        <Items items={this.state.items} onAdd={this.addMyShop}/>
         <Footer/>
       </div>
     )
+  }
+  addMyShop(item){
+    this.setState({myShop:[...this.state.myShop, item]})
   }
 ;
 }
