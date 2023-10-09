@@ -6,7 +6,7 @@ const showMyShop = (props) => {
   return (
     <div>
       {props.myShop.map((el) => (
-        <Order key={el.id} item={el} />
+        <Order key={el.id} item={el} onDelete={props.onDelete}/>
       ))}
     </div>
   );

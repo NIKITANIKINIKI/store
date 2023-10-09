@@ -46,18 +46,34 @@ class App extends React.Component {
       ]
     }
     this.addMyShop=this.addMyShop.bind(this)
+    this.deleteShop=this.deleteShop.bind(this)
   }
   render() {
     return (
       <div className='wrapper'>
-        <Header myShop={this.state.myShop}/>
+        <Header myShop={this.state.myShop} onDelete={this.deleteShop}/>
         <Items items={this.state.items} onAdd={this.addMyShop}/>
         <Footer/>
       </div>
     )
   }
+
+  deleteShop(id){
+    this.setState({myShop: this.state.myShop.filter(el => el.id!==id)})
+  }
+
+
   addMyShop(item){
-    this.setState({myShop:[...this.state.myShop, item]})
+    let IsInArray=false 
+    this.state.myShop.forEach(el =>{
+      if(el.id===item.id){
+        IsInArray=true
+      }
+    })
+    if(!IsInArray){
+      this.setState({myShop:[...this.state.myShop, item]})
+    }
+    
   }
 ;
 }

@@ -182,3 +182,21 @@ header .my-card .myitem p{
   font-weight: 600;
   color: green;
 }
+
+header .my-card .empty h2{
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+header .my-card .myitem .delete-shop{
+  float:right;
+  position: relative;
+  top:-30px;
+  cursor:pointer;
+  color:red;
+  transition: transform 0.5s ease;
+}
+
+header .my-card .myitem .delete-shop:hover{
+  transform:scale(1.8);
+}
